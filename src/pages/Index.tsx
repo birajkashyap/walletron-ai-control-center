@@ -1,13 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { NavBar } from "@/components/NavBar";
+import { HeroSection } from "@/components/HeroSection";
+import { DashboardSection } from "@/components/DashboardSection";
+import { ChatSection } from "@/components/ChatSection";
+import { SdkSection } from "@/components/SdkSection";
+import { McpSection } from "@/components/McpSection";
+import { PricingSection } from "@/components/PricingSection";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <ThemeProvider defaultTheme="dark">
+      <div className="min-h-screen flex flex-col">
+        <NavBar />
+        <main className="flex-1">
+          <HeroSection />
+          <DashboardSection />
+          <ChatSection />
+          <SdkSection />
+          <McpSection />
+          <PricingSection />
+        </main>
+        <Footer />
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 
